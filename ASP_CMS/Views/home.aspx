@@ -72,7 +72,7 @@
             </div>
             <!-- /#advantages -->
 
-            <!-- *** ADVANTAGES END *** -->
+            <!-- *** ADVANTAGESEND *** -->
 
             <!-- *** HOT PRODUCT SLIDESHOW ***
  _________________________________________________________ -->
