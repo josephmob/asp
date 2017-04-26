@@ -13,6 +13,15 @@ namespace ASP_CMS.Views.Layouts {
     public partial class _Layout {
         
         /// <summary>
+        /// theme-stylesheet control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        //protected global::System.Web.UI.HtmlControls.HtmlLink theme-stylesheet;
+        
+        /// <summary>
         /// head control.
         /// </summary>
         /// <remarks>
