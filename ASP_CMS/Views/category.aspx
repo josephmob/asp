@@ -145,8 +145,8 @@
                                     <h3><a href="detail.html">Fur coat with very but very very long name</a></h3>
                                     <p class="price">$143.00</p>
                                     <p class="buttons">
-                                        <a href="detail.html" class="btn btn-default">View detail</a>
-                                        <a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <a href="detail.aspx" class="btn btn-default">View detail</a>
+                                        <a href="basket.aspx" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </p>
                                 </div>
                                 <!-- /.text -->
@@ -178,7 +178,7 @@
                                     <p class="price"><del>$280</del> $143.00</p>
                                     <p class="buttons">
                                         <a href="detail.html" class="btn btn-default">View detail</a>
-                                        <a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <a href="basket.aspx" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </p>
                                 </div>
                                 <!-- /.text -->
@@ -228,7 +228,7 @@
                                     <p class="price">$143.00</p>
                                     <p class="buttons">
                                         <a href="detail.html" class="btn btn-default">View detail</a>
-                                        <a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <a href="basket.aspx" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </p>
 
                                 </div>
@@ -261,7 +261,7 @@
                                     <p class="price">$143.00</p>
                                     <p class="buttons">
                                         <a href="detail.html" class="btn btn-default">View detail</a>
-                                        <a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <a href="basket.aspx" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </p>
 
                                 </div>
@@ -294,7 +294,7 @@
                                     <p class="price">$143.00</p>
                                     <p class="buttons">
                                         <a href="detail.html" class="btn btn-default">View detail</a>
-                                        <a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <a href="basket.aspx" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </p>
 
                                 </div>
@@ -333,7 +333,7 @@
                                     <p class="price">$143.00</p>
                                     <p class="buttons">
                                         <a href="detail.html" class="btn btn-default">View detail</a>
-                                        <a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <a href="basket.aspx" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </p>
 
                                 </div>

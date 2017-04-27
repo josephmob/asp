@@ -129,6 +129,7 @@
     <Content Include="packages.config" />
     <Content Include="Views\detail.aspx" />
     <Content Include="Views\basket.aspx" />
+    <Content Include="Views\contacto.aspx" />
     <Content Include="Views\Layouts\_Layout.Master" />
     <Content Include="css\bootstrap.css.map" />
     <None Include="Web.Debug.config">
@@ -176,6 +177,13 @@
     </Compile>
     <Compile Include="Views\basket.aspx.designer.cs">
       <DependentUpon>basket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\contacto.aspx.cs">
+      <DependentUpon>contacto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\contacto.aspx.designer.cs">
+      <DependentUpon>contacto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Layouts\_Layout.Master.cs">
       <DependentUpon>_Layout.Master</DependentUpon>
