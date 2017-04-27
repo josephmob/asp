@@ -374,7 +374,7 @@
 
             <!-- *** GET INSPIRED ***
  _________________________________________________________ -->
-            <div class="container" data-animate="fadeInUpBig">
+        <!--    <div class="container" data-animate="fadeInUpBig">
                 <div class="col-md-12">
                     <div class="box slideshow">
                         <h3>Get Inspired</h3>
@@ -398,13 +398,13 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
             <!-- *** GET INSPIRED END *** -->
 
             <!-- *** BLOG HOMEPAGE ***
  _________________________________________________________ -->
 
-            <div class="box text-center" data-animate="fadeInUp">
+          <!--  <div class="box text-center" data-animate="fadeInUp">
                 <div class="container">
                     <div class="col-md-12">
                         <h3 class="text-uppercase">From our blog</h3>
@@ -447,7 +447,7 @@
 
                         </div>
 
-                    </div>
+                    </div> -->
                     <!-- /#blog-homepage -->
                 </div>
             </div>
