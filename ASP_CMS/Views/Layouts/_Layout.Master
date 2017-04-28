@@ -1,6 +1,40 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="_Layout.master.cs" Inherits="ASP_CMS.Views.Layouts._Layout" %>
 
+<!DOCTYPE html>
 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Obaju e-commerce template">
+    <meta name="author" content="Ondrej Svestka | ondrejsvestka.cz">
+    <meta name="keywords" content="">
+
+    <meta name="keywords" content="">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
+
+    <!-- styles -->
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/animate.min.css" rel="stylesheet">
+    <link href="/css/owl.carousel.css" rel="stylesheet">
+    <link href="/css/owl.theme.css" rel="stylesheet">
+
+     
+    <link href="/css/style.default.css" rel="stylesheet" >
+
+
+    <!-- your stylesheet with modifications -->
+    <link href="/css/custom.css" rel="stylesheet">
+
+    <script src="/js/respond.min.js"></script>
+
+    <link rel="shortcut icon" href="favicon.png">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -8,8 +42,7 @@
     <form id="form1" runat="server">
     <div>
         <!--Layout-->
-        <!-- *** TOPBAR ***
- _________________________________________________________ -->
+        <!-- *** TOPBAR ***-->
     <div id="top">
         <div class="container">
             <div class="col-md-6 offer" data-animate="fadeInDown">
@@ -70,9 +103,9 @@
         <div class="container">
             <div class="navbar-header">
 
-                <a class="navbar-brand home" href="index.html" data-animate-hover="bounce">
-                    <img src="img/logo.png" alt="Obaju logo" class="hidden-xs">
-                    <img src="img/logo-small.png" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - go to homepage</span>
+                <a class="navbar-brand home" href="home.aspx" data-animate-hover="bounce">
+                    <img src="/img/logo.png" alt="Obaju logo" class="hidden-xs">
+                    <img src="/img/logo-small.png" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
@@ -83,7 +116,7 @@
                         <span class="sr-only">Toggle search</span>
                         <i class="fa fa-search"></i>
                     </button>
-                    <a class="btn btn-default navbar-toggle" href="basket.html">
+                    <a class="btn btn-default navbar-toggle" href="basket.aspx">
                         <i class="fa fa-shopping-cart"></i>  <span class="hidden-xs">3 items in cart</span>
                     </a>
                 </div>
@@ -93,7 +126,8 @@
             <div class="navbar-collapse collapse" id="navigation">
 
                 <ul class="nav navbar-nav navbar-left">
-                    <li class="active"><a href="index.html">Home</a>
+                    <li class="active"><a href="index.html">
+                        <asp:Label ID="home" runat="server" Text="Label"></asp:Label></a>
                     </li>
                     <li class="dropdown yamm-fw">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Men <b class="caret"></b></a>
@@ -172,26 +206,26 @@
                     </li>
 
                     <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Ladies <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Categorias <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <h5>Clothing</h5>
+                                            <h5>Categoria Especifica</h5>
                                             <ul>
-                                                <li><a href="category.html">T-shirts</a>
+                                                <li><a href="category.html">Categoria id 1</a>
                                                 </li>
-                                                <li><a href="category.html">Shirts</a>
+                                                <li><a href="category.html">Categoria id 2</a>
                                                 </li>
-                                                <li><a href="category.html">Pants</a>
+                                                <li><a href="category.html">Categoria id 3</a>
                                                 </li>
-                                                <li><a href="category.html">Accessories</a>
+                                                <li><a href="category.html">Categoria id 4</a>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
-                                            <h5>Shoes</h5>
+                                            <h5>Categoria Especifica</h5>
                                             <ul>
                                                 <li><a href="category.html">Trainers</a>
                                                 </li>
@@ -204,7 +238,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
-                                            <h5>Accessories</h5>
+                                            <h5>Categoria Especifica</h5>
                                             <ul>
                                                 <li><a href="category.html">Trainers</a>
                                                 </li>
@@ -219,7 +253,7 @@
                                                 <li><a href="category.html">Casual</a>
                                                 </li>
                                             </ul>
-                                            <h5>Looks and trends</h5>
+                                            <h5>Categoria Especifica</h5>
                                             <ul>
                                                 <li><a href="category.html">Trainers</a>
                                                 </li>
@@ -228,18 +262,6 @@
                                                 <li><a href="category.html">Hiking shoes</a>
                                                 </li>
                                             </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="banner">
-                                                <a href="#">
-                                                    <img src="img/banner.jpg" class="img img-responsive" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="banner">
-                                                <a href="#">
-                                                    <img src="img/banner2.jpg" class="img img-responsive" alt="">
-                                                </a>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -247,9 +269,11 @@
                             </li>
                         </ul>
                     </li>
+                    <li class=""><a href="contacto.aspx">Contacto</a>
+                    </li>
 
                     <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Template <b class="caret"></b></a>
+                       <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Template <b class="caret"></b></a>-->
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">
@@ -257,15 +281,15 @@
                                         <div class="col-sm-3">
                                             <h5>Shop</h5>
                                             <ul>
-                                                <li><a href="index.html">Homepage</a>
+                                                <li><a href="home.aspx">Homepage</a>
                                                 </li>
-                                                <li><a href="category.html">Category - sidebar left</a>
+                                                <li><a href="category.aspx">Category - sidebar left</a>
                                                 </li>
                                                 <li><a href="category-right.html">Category - sidebar right</a>
                                                 </li>
                                                 <li><a href="category-full.html">Category - full width</a>
                                                 </li>
-                                                <li><a href="detail.html">Product detail</a>
+                                                <li><a href="detail.aspx">Product detail</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -287,7 +311,7 @@
                                         <div class="col-sm-3">
                                             <h5>Order process</h5>
                                             <ul>
-                                                <li><a href="basket.html">Shopping cart</a>
+                                                <li><a href="basket.aspx">Shopping cart</a>
                                                 </li>
                                                 <li><a href="checkout1.html">Checkout - step 1</a>
                                                 </li>
@@ -332,7 +356,7 @@
             <div class="navbar-buttons">
 
                 <div class="navbar-collapse collapse right" id="basket-overview">
-                    <a href="basket.html" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">3 items in cart</span></a>
+                    <a href="basket.aspx" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">3 items in cart</span></a>
                 </div>
                 <!--/.nav-collapse -->
 
@@ -387,13 +411,13 @@
                             </li>
                             <li><a href="faq.html">FAQ</a>
                             </li>
-                            <li><a href="contact.html">Contact us</a>
+                            <li><a href="contacto.aspx">Contact us</a>
                             </li>
                         </ul>
 
                         <hr>
 
-                        <h4>User section</h4>
+                        <!--<h4>User section</h4>
 
                         <ul>
                             <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
@@ -402,7 +426,7 @@
                             </li>
                         </ul>
 
-                        <hr class="hidden-md hidden-lg hidden-sm">
+                        <hr class="hidden-md hidden-lg hidden-sm">-->
 
                     </div>
                     <!-- /.col-md-3 -->
@@ -452,8 +476,6 @@
                             <strong>Great Britain</strong>
                         </p>
 
-                        <a href="contact.html">Go to contact page</a>
-
                         <hr class="hidden-md hidden-lg">
 
                     </div>
@@ -467,21 +489,21 @@
 
                         <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 
-                        <form>
+                       <!-- <form>
                             <div class="input-group">
 
                                 <input type="text" class="form-control">
 
                                 <span class="input-group-btn">
 
-			    <button class="btn btn-default" type="button">Subscribe!</button>
+			                        <button class="btn btn-default" type="button">Subscribe!</button>
 
-			</span>
+			                    </span>
 
                             </div>
-                            <!-- /input-group -->
-                        </form>
-
+                           
+                        </form>-->
+                        <!-- /input-group -->
                         <hr>
 
                         <h4>Stay in touch</h4>
@@ -516,11 +538,11 @@
         <div id="copyright">
             <div class="container">
                 <div class="col-md-6">
-                    <p class="pull-left">© 2015 Your name goes here.</p>
+                    <p class="pull-left">© 2017 KRAVITZ DEVELOPERS</p>
 
                 </div>
                 <div class="col-md-6">
-                    <p class="pull-right">Template by <a href="https://bootstrapious.com/e-commerce-templates">Bootstrapious.com</a>
+                    <p class="pull-right">All rights reserved <a href="http://g1s2aw.sdslab.cat">Kravitz web page</a>
                          <!-- Not removing these links is part of the license conditions of the template. Thanks for understanding :) If you want to use the template without the attribution links, you can do so after supporting further themes development at https://bootstrapious.com/donate  -->
                     </p>
                 </div>
@@ -538,14 +560,14 @@
 
     <!-- *** SCRIPTS TO INCLUDE ***
  _________________________________________________________ -->
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.cookie.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/modernizr.js"></script>
-    <script src="js/bootstrap-hover-dropdown.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/front.js"></script>
+    <script src="/js/jquery-1.11.0.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <script src="/js/waypoints.min.js"></script>
+    <script src="/js/modernizr.js"></script>
+    <script src="/js/bootstrap-hover-dropdown.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/front.js"></script>
 
         
     </div>
