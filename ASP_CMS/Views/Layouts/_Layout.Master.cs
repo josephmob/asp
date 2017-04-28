@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using ASP_CMS.Models;
 
 namespace ASP_CMS.Views.Layouts
 {
@@ -11,7 +12,9 @@ namespace ASP_CMS.Views.Layouts
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //Models.ConnectionClass.dataset("select * from articulos");
+            //FindControl("home");
+            home.Text = Models.ConnectionClass.dataset("select nombre from articulos");
         }
     }
 }
