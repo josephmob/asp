@@ -11,7 +11,14 @@ namespace ASP_CMS.Views.Layouts
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            gridProductosCategoria.DataSource = GetCategoryProducts();
+            gridProductosCategoria.DataBind();
+        }
+        public System.Data.DataTable GetCategoryProducts()
+        {
+            var productos = Models.ConnectionClass.PortarDades("select * from articulos");
 
+            return productos.Tables["dades"];
         }
     }
 }

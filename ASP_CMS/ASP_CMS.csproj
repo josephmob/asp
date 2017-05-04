@@ -141,6 +141,8 @@
     <Content Include="css\fonts\fontawesome-webfont.ttf" />
     <Content Include="css\fonts\fontawesome-webfont.woff" />
     <Content Include="css\fonts\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\dev-asp-sds - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\dev-asp-sds - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
