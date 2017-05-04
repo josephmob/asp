@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/_Layout.Master" AutoEventWireup="true" CodeBehind="category.aspx.cs" Inherits="ASP_CMS.Views.Layouts.WebForm2" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -71,9 +72,9 @@
                         </div>
                     </div>
 
-                    
 
-                    
+
+
 
                     <!-- *** MENUS AND FILTERS END *** -->
 
@@ -122,6 +123,66 @@
 
                     <div class="row products">
 
+
+                        <asp:ListView runat="server" ID="gridProductosCategoria">
+                            <LayoutTemplate>
+                                <div runat="server" id="itemPlaceHolder" />
+
+
+
+
+
+                            </LayoutTemplate>
+                            <ItemTemplate>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="product">
+                                        <div class="flip-container">
+                                            <div class="flipper">
+                                                <div class="front">
+                                                    <a href="detail.aspx">
+                                                        <img src="/img/product1.jpg" alt="" class="img-responsive">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="detail.html" class="invisible">
+                                            <img src="/img/product1.jpg" alt="<%# Eval("nombre") %>" class="img-responsive">
+                                        </a>
+                                        <div class="text">
+                                            <h3><a href="detail.html"><%# Eval("nombre") %></a></h3>
+                                            <p class="price"><%# Eval("precio") %>€</p>
+                                            <p class="buttons">
+                                                <a href="detail.aspx" class="btn btn-default">Ver Detalle</a>
+                                                <a href="basket.aspx" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Añadir al Carrito</a>
+                                            </p>
+                                        </div>
+
+
+                                        <!-- /.text -->
+                                    </div>
+                                    <!-- /.product -->
+                                </div>
+                                <%--<tr>
+                                    <td>
+                                        <a href="#">
+                                            <img src="/img/detailsquare.jpg" alt="White Blouse Armani">
+                                        </a>
+                                    </td>
+                                    <td><a href="#"><%# Eval("nombre") %></a>
+                                    </td>
+                                    <td>
+                                        <input type="number" value="2" class="form-control">
+                                    </td>
+                                    <td><%# Convert.ToInt32(Eval("precio"))+12 %>€</td>
+                                    <td>21%</td>
+                                    <td><%# Convert.ToInt32(Eval("precio"))+12 %>€</td>
+                                    <td><a href="#"><i class="fa fa-trash-o"></i></a>
+                                    </td>
+                                </tr>--%>
+                            </ItemTemplate>
+                        </asp:ListView>
+
+
                         <div class="col-md-4 col-sm-6">
                             <div class="product">
                                 <div class="flip-container">
@@ -153,6 +214,10 @@
                             </div>
                             <!-- /.product -->
                         </div>
+
+
+
+
 
                         <div class="col-md-4 col-sm-6">
                             <div class="product">
@@ -355,7 +420,7 @@
                     <div class="pages">
 
                         <p class="loadMore">
-                            <a href="#" class="btn btn-primary btn-lg"><i class="fa fa-chevron-down"></i> Load more</a>
+                            <a href="#" class="btn btn-primary btn-lg"><i class="fa fa-chevron-down"></i>Load more</a>
                         </p>
 
                         <ul class="pagination">
