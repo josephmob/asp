@@ -172,7 +172,7 @@
 
                 <div class="col-md-9">
 
-                    <asp:FormView ID="Producto" selectMethod="GetProduct" runat="server">
+                    <asp:FormView ID="Producto"  runat="server">
                         <ItemTemplate>
                             <div class="row" id="productMain">
                                 <div class="col-sm-6">
@@ -217,9 +217,9 @@
                             <div class="box" id="details">
                                 <p>
                                 </p>
-                                <h4>Product details</h4>
+                                <h4>Detalles del producto</h4>
                                 <p><%# Eval("descripcion") %> White lace top, woven, has a round neck, short sleeves, has knitted lining attached</p>
-                                <h4>Material &amp; care</h4>
+                                <%--<h4>Material &amp; care</h4>
                                 <ul>
                                     <li>Polyester</li>
                                     <li>Machine wash</li>
@@ -245,7 +245,7 @@
                                         <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
                                         <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
                                     </p>
-                                </div>
+                                </div>--%>
                             </div>
                         </ItemTemplate>
                     </asp:FormView>

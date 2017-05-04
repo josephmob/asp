@@ -12,12 +12,21 @@ namespace ASP_CMS.Views.Layouts
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Producto.DataSource = GetProduct();
-            //Producto.DataBind();
+            try
+            {
+                int productId = int.Parse(Request.QueryString["id"]);
+                Producto.DataSource = GetProduct(productId);
+                Producto.DataBind();
+            }
+            catch (Exception)
+            {
+                
+            }
+
         }
-        public System.Data.DataTable GetProduct([QueryString("id")]int? productId)
+        public System.Data.DataTable GetProduct(int productId)
         {
-            if (productId.HasValue && productId > 0)
+            if (/*productId.HasValue &&*/ productId > 0)
             {
                 var productos = Models.ConnectionClass.PortarDades("select * from articulos where id = " + productId);
                 return productos.Tables["dades"];
@@ -27,7 +36,7 @@ namespace ASP_CMS.Views.Layouts
                 return null;
             }
 
-            
+
         }
     }
 }
