@@ -20,7 +20,7 @@ namespace ASP_CMS.Views.Layouts
             }
             catch (Exception)
             {
-                
+
             }
 
         }
@@ -28,7 +28,11 @@ namespace ASP_CMS.Views.Layouts
         {
             if (/*productId.HasValue &&*/ productId > 0)
             {
-                var productos = Models.ConnectionClass.PortarDades("select * from articulos where id = " + productId);
+                var productos = Models.ConnectionClass.PortarDades(@"select * 
+                                                                    from articulos, fotos_articulos, fotos
+                                                                    where articulos.id = fotos_articulos.id_articulo
+                                                                    and fotos_articulos.id_foto = fotos.id
+                                                                    and articulos.id = " + productId);
                 return productos.Tables["dades"];
             }
             else
