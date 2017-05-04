@@ -11,7 +11,7 @@
 
                 <div class="col-md-12">
                     <ul class="breadcrumb">
-                        <li><a href="#">Home</a>
+                        <li><a href="home.aspx">Home</a>
                         </li>
                         <li><a href="#">Ladies</a>
                         </li>
@@ -163,11 +163,11 @@
 
                     <!-- *** MENUS AND FILTERS END *** -->
 
-                    <div class="banner">
+                  <!--  <div class="banner">
                         <a href="#">
                             <img src="/img/banner.jpg" alt="sales 2014" class="img-responsive">
                         </a>
-                    </div>
+                    </div>-->
                 </div>
 
                 <div class="col-md-9">
@@ -177,18 +177,6 @@
                             <div id="mainImage">
                                 <img src="/img/detailbig3.jpg" alt="" class="img-responsive">
                             </div>
-
-                            <div class="ribbon sale">
-                                <div class="theribbon">SALE</div>
-                                <div class="ribbon-background"></div>
-                            </div>
-                            <!-- /.ribbon -->
-
-                            <div class="ribbon new">
-                                <div class="theribbon">NEW</div>
-                                <div class="ribbon-background"></div>
-                            </div>
-                            <!-- /.ribbon -->
 
                         </div>
                         <div class="col-sm-6">
@@ -249,15 +237,6 @@
                             </blockquote>
 
                             <hr>
-                            <div class="social">
-                                <h4>Show it to your friends</h4>
-                                <p>
-                                    <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
-                                    <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
-                                </p>
-                            </div>
                     </div>
                   
 

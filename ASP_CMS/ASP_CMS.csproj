@@ -129,9 +129,9 @@
     <Content Include="js\respond.min.js" />
     <Content Include="js\waypoints.min.js" />
     <Content Include="packages.config" />
-    <Content Include="Views\detail.aspx" />
     <Content Include="Views\basket.aspx" />
     <Content Include="Views\contacto.aspx" />
+    <Content Include="Views\detail.aspx" />
     <Content Include="Views\Layouts\_Layout.Master" />
     <Content Include="css\bootstrap.css.map" />
     <Content Include="css\fonts\flexslider-icon.eot" />
@@ -162,6 +162,13 @@
     </Compile>
     <Compile Include="Models\ConnectionClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\detail.aspx.cs">
+      <DependentUpon>detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\detail.aspx.designer.cs">
+      <DependentUpon>detail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -175,13 +182,6 @@
     </Compile>
     <Compile Include="Views\category.aspx.designer.cs">
       <DependentUpon>category.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\detail.aspx.cs">
-      <DependentUpon>detail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\detail.aspx.designer.cs">
-      <DependentUpon>detail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\basket.aspx.cs">
       <DependentUpon>basket.aspx</DependentUpon>
