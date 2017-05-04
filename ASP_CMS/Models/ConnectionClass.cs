@@ -10,9 +10,9 @@ namespace ASP_CMS.Models
 {
     public class ConnectionClass
     {
-        public static string dataset(string query)
+        public static System.Data.DataSet PortarDades(string query)
         {
-            var dataset = new System.Data.DataSet();
+            var dts = new System.Data.DataSet();
             var dataConnectionString = ConfigurationManager.ConnectionStrings["SDS_SQLConnectionString"].ConnectionString;
             var dataConnection = new System.Data.OleDb.OleDbConnection(dataConnectionString);
 
@@ -20,12 +20,13 @@ namespace ASP_CMS.Models
 
             var dataAdapter = new System.Data.OleDb.OleDbDataAdapter(query, dataConnection);
 
-            dataAdapter.Fill(dataset, "table");
+            dataAdapter.Fill(dts, "dades");
+            dataConnection.Close();
 
-            var result = dataset.Tables;
-            var textResult = dataset.GetXml().ToString();
 
-            return textResult;
+
+
+            return dts;
         }
     }
 }

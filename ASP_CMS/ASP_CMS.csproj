@@ -129,6 +129,14 @@
     <Content Include="js\respond.min.js" />
     <Content Include="js\waypoints.min.js" />
     <Content Include="packages.config" />
+    <Content Include="Upload\adidas_hamburg.jpg" />
+    <Content Include="Upload\asics_gellyte_5.jpg" />
+    <Content Include="Upload\asics_gelyte3_rose.jpg" />
+    <Content Include="Upload\crocs_rayo.jpg" />
+    <Content Include="Upload\jordan_gold.jpg" />
+    <Content Include="Upload\jordan_one_unc.jpg" />
+    <Content Include="Upload\nike_huracane.jpg" />
+    <Content Include="Upload\reebook_classic_olive.jpg" />
     <Content Include="Views\basket.aspx" />
     <Content Include="Views\contacto.aspx" />
     <Content Include="Views\detail.aspx" />
@@ -141,6 +149,8 @@
     <Content Include="css\fonts\fontawesome-webfont.ttf" />
     <Content Include="css\fonts\fontawesome-webfont.woff" />
     <Content Include="css\fonts\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\dev-asp-sds - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\dev-asp-sds - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
