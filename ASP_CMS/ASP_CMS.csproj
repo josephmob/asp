@@ -130,6 +130,8 @@
     <Content Include="js\waypoints.min.js" />
     <Content Include="packages.config" />
     <Content Include="Upload\adidas_hamburg.jpg" />
+    <Content Include="Upload\AirMax1.png" />
+    <Content Include="Upload\AirMax2.png" />
     <Content Include="Upload\asics_gellyte_5.jpg" />
     <Content Include="Upload\asics_gelyte3_rose.jpg" />
     <Content Include="Upload\crocs_rayo.jpg" />

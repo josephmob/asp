@@ -12,7 +12,7 @@
                     <ul class="breadcrumb">
                         <li><a href="#">Home</a>
                         </li>
-                        <li>Ladies</li>
+                        <li><asp:Label ID="NombreCategoriaSiteMap" runat="server" Text="Pagina No Encontrada"></asp:Label></li>
                     </ul>
                 </div>
 
@@ -87,8 +87,9 @@
 
                 <div class="col-md-9">
                     <div class="box">
-                        <h1>Ladies</h1>
-                        <p>In our Ladies department we offer wide selection of the best products we have found and carefully selected worldwide.</p>
+                        <h1><asp:Label ID="NombreCategoria" runat="server" Text="Pagina No Encontrada"></asp:Label></h1>
+                        
+                        <%--<p>In our Ladies department we offer wide selection of the best products we have found and carefully selected worldwide.</p>--%>
                     </div>
 
                     <div class="box info-bar">
@@ -123,36 +124,37 @@
 
                     <div class="row products">
 
-
                         <asp:ListView runat="server" ID="gridProductosCategoria">
+
                             <LayoutTemplate>
                                 <div runat="server" id="itemPlaceHolder" />
-
-
-
-
-
                             </LayoutTemplate>
+
                             <ItemTemplate>
                                 <div class="col-md-4 col-sm-6">
                                     <div class="product">
                                         <div class="flip-container">
                                             <div class="flipper">
                                                 <div class="front">
-                                                    <a href="detail.aspx">
-                                                        <img src="/img/product1.jpg" alt="" class="img-responsive">
+                                                    <a href="detail.aspx?id=<%# Eval("id") %>">
+                                                        <img src="/Upload/<%# Eval("url") %>" alt="" class="img-responsive">
+                                                    </a>
+                                                </div>
+                                                <div class="back">
+                                                    <a href="detail.aspx?id=<%# Eval("id") %>">
+                                                        <img src="/Upload/<%# Eval("url") %>" alt="" class="img-responsive">
                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="detail.html" class="invisible">
-                                            <img src="/img/product1.jpg" alt="<%# Eval("nombre") %>" class="img-responsive">
+                                        <a href="detail.aspx?id=<%# Eval("id") %>" class="invisible">
+                                            <img src="/Upload/<%# Eval("url") %>" alt="" class="img-responsive">
                                         </a>
                                         <div class="text">
-                                            <h3><a href="detail.html"><%# Eval("nombre") %></a></h3>
+                                            <h3><a href="detail.aspx?id=<%# Eval("id") %>"><%# Eval("nombre") %></a></h3>
                                             <p class="price"><%# Eval("precio") %>€</p>
                                             <p class="buttons">
-                                                <a href="detail.aspx" class="btn btn-default">Ver Detalle</a>
+                                                <a href="detail.aspx?id=<%# Eval("id") %>" class="btn btn-default">Ver Mas</a>
                                                 <a href="basket.aspx" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Añadir al Carrito</a>
                                             </p>
                                         </div>
@@ -162,28 +164,12 @@
                                     </div>
                                     <!-- /.product -->
                                 </div>
-                                <%--<tr>
-                                    <td>
-                                        <a href="#">
-                                            <img src="/img/detailsquare.jpg" alt="White Blouse Armani">
-                                        </a>
-                                    </td>
-                                    <td><a href="#"><%# Eval("nombre") %></a>
-                                    </td>
-                                    <td>
-                                        <input type="number" value="2" class="form-control">
-                                    </td>
-                                    <td><%# Convert.ToInt32(Eval("precio"))+12 %>€</td>
-                                    <td>21%</td>
-                                    <td><%# Convert.ToInt32(Eval("precio"))+12 %>€</td>
-                                    <td><a href="#"><i class="fa fa-trash-o"></i></a>
-                                    </td>
-                                </tr>--%>
                             </ItemTemplate>
+
                         </asp:ListView>
 
 
-                        <div class="col-md-4 col-sm-6">
+                        <%--<div class="col-md-4 col-sm-6">
                             <div class="product">
                                 <div class="flip-container">
                                     <div class="flipper">
@@ -413,15 +399,15 @@
                             </div>
                             <!-- /.product -->
                         </div>
-                        <!-- /.col-md-4 -->
+                        <!-- /.col-md-4 -->--%>
                     </div>
                     <!-- /.products -->
 
                     <div class="pages">
 
-                        <p class="loadMore">
+                        <%--<p class="loadMore">
                             <a href="#" class="btn btn-primary btn-lg"><i class="fa fa-chevron-down"></i>Load more</a>
-                        </p>
+                        </p>--%>
 
                         <ul class="pagination">
                             <li><a href="#">&laquo;</a>

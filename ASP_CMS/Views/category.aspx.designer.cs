@@ -13,6 +13,24 @@ namespace ASP_CMS.Views.Layouts {
     public partial class WebForm2 {
         
         /// <summary>
+        /// NombreCategoriaSiteMap control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label NombreCategoriaSiteMap;
+        
+        /// <summary>
+        /// NombreCategoria control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label NombreCategoria;
+        
+        /// <summary>
         /// gridProductosCategoria control.
         /// </summary>
         /// <remarks>
