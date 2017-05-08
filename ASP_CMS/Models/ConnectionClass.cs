@@ -20,7 +20,7 @@ namespace ASP_CMS.Models
 
             var dataAdapter = new System.Data.OleDb.OleDbDataAdapter(query, dataConnection);
 
-            dataAdapter.Fill(dts, "dades");
+           dataAdapter.Fill(dts, "dades");
             dataConnection.Close();
 
 
