@@ -22,50 +22,32 @@
                     <div class="panel panel-default sidebar-menu">
 
                         <div class="panel-heading">
-                            <h3 class="panel-title">Categories</h3>
+                            <h3 class="panel-title">Subcategorias</h3>
                         </div>
 
                         <div class="panel-body">
                             <ul class="nav nav-pills nav-stacked category-menu">
                                 <li>
-                                    <a href="category.html">Men <span class="badge pull-right">42</span></a>
-                                    <ul>
-                                        <li><a href="category.html">T-shirts</a>
-                                        </li>
-                                        <li><a href="category.html">Shirts</a>
-                                        </li>
-                                        <li><a href="category.html">Pants</a>
-                                        </li>
-                                        <li><a href="category.html">Accessories</a>
-                                        </li>
+                                    <a href="category.html"><asp:Label ID="Label1" runat="server" Text="Pagina No Encontrada"></asp:Label></a>
+                                    <asp:ListView runat="server" ID="lvSubcategorias">
+
+
+                                    <LayoutTemplate>
+                                        <ul>
+                                            <div runat="server" id="itemPlaceHolder" />
+ 
                                     </ul>
+                                                
+           
+                                    </LayoutTemplate>
+                                    <ItemTemplate>
+                                             <li><a href="category.aspx?categoryId=<%# Eval("id") %>"> <%# Eval("nombre") %> </a>
+                                            </li>
+                                    </ItemTemplate>
+                                </asp:ListView>
+                                    
                                 </li>
-                                <li class="active">
-                                    <a href="category.html">Ladies  <span class="badge pull-right">123</span></a>
-                                    <ul>
-                                        <li><a href="category.html">T-shirts</a>
-                                        </li>
-                                        <li><a href="category.html">Skirts</a>
-                                        </li>
-                                        <li><a href="category.html">Pants</a>
-                                        </li>
-                                        <li><a href="category.html">Accessories</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="category.html">Kids  <span class="badge pull-right">11</span></a>
-                                    <ul>
-                                        <li><a href="category.html">T-shirts</a>
-                                        </li>
-                                        <li><a href="category.html">Skirts</a>
-                                        </li>
-                                        <li><a href="category.html">Pants</a>
-                                        </li>
-                                        <li><a href="category.html">Accessories</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                               
 
                             </ul>
 
