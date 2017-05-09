@@ -24,7 +24,7 @@ namespace ASP_CMS.Views.Layouts
             {
 
             }
-            
+
         }
         public System.Data.DataTable GetCategoryProducts(int categoryId)
         {
@@ -44,8 +44,8 @@ where categorias.id = " + categoryId);
         public string GetCategoryName(int categoryId)
         {
             var categoria = Models.ConnectionClass.PortarDades(@"select *
-from categorias
-where categorias.id = " + categoryId);
+            from categorias
+            where categorias.id = " + categoryId);
 
             return categoria.Tables["dades"].Rows[0]["nombre"].ToString();
         }
