@@ -11,7 +11,51 @@ namespace ASP_CMS.Views.Layouts
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            try
+            {
+                //int productId = int.Parse(Request.QueryString["id"]);
+                SliderHome.DataSource = GetProduct();
+                SliderHot.DataSource = GetHotWeek();
+                SliderHome.DataBind();
+                SliderHot.DataBind();
+            }
+            catch (Exception)
+            {
+
+            }
+
         }
+
+        public System.Data.DataTable GetProduct()
+        {
+
+                var productos = Models.ConnectionClass.PortarDades(@"SELECT TOP 4 url
+                                                                    FROM [dbo].[articulos]
+																	join fotos_articulos on fotos_articulos.id_articulo = articulos.id
+                                                                    join fotos on fotos.id = fotos_articulos.id_foto                                                              
+                                                                    ORDER BY NEWID()");
+                return productos.Tables["dades"];
+            
+     
+
+
+        }
+
+        public System.Data.DataTable GetHotWeek()
+        {
+
+            var productos = Models.ConnectionClass.PortarDades(@"SELECT TOP 7 *
+                                                                    FROM [dbo].[articulos]
+																	join fotos_articulos on fotos_articulos.id_articulo = articulos.id
+                                                                    join fotos on fotos.id = fotos_articulos.id_foto                                                              
+                                                                    ORDER BY NEWID()");
+            return productos.Tables["dades"];
+
+
+
+
+        }
+
+
     }
 }
