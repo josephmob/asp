@@ -137,18 +137,18 @@
                                             <div class="flipper">
                                                 <div class="front">
                                                     <a href="detail.aspx?id=<%# Eval("id") %>">
-                                                        <img src="/Upload/<%# Eval("url") %>" alt="" class="img-responsive">
+                                                        <img src="/Upload/<%# Eval("url") %>" alt="" class="img-responsive productImage">
                                                     </a>
                                                 </div>
                                                 <div class="back">
                                                     <a href="detail.aspx?id=<%# Eval("id") %>">
-                                                        <img src="/Upload/<%# Eval("url") %>" alt="" class="img-responsive">
+                                                        <img src="/Upload/<%# Eval("url") %>" alt="" class="img-responsive productImage">
                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
                                         <a href="detail.aspx?id=<%# Eval("id") %>" class="invisible">
-                                            <img src="/Upload/<%# Eval("url") %>" alt="" class="img-responsive">
+                                            <img src="/Upload/<%# Eval("url") %>" alt="" class="img-responsive productImage">
                                         </a>
                                         <div class="text">
                                             <h3><a href="detail.aspx?id=<%# Eval("id") %>"><%# Eval("nombre") %></a></h3>
