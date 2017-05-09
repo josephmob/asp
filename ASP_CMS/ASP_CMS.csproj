@@ -82,6 +82,7 @@
     <Content Include="css\style.mono.css" />
     <Content Include="css\style.pink.css" />
     <Content Include="css\style.violet.css" />
+    <Content Include="css\utilidades.css" />
     <Content Include="img\AjaxLoader.gif" />
     <Content Include="img\banner.jpg" />
     <Content Include="img\banner2.jpg" />

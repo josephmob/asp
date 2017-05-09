@@ -1,0 +1,15 @@
+﻿body {
+}
+.jose {
+ object-fit:contain;
+ width:100%;
+ height:500px;
+ vertical-align:middle;
+}
+.pol{
+     object-fit:contain;
+ width:100%;
+ height:200px;
+ vertical-align:middle;
+
+}
