@@ -154,6 +154,7 @@
     <Content Include="css\fonts\fontawesome-webfont.woff" />
     <Content Include="css\fonts\FontAwesome.otf" />
     <Content Include="carrito.ascx" />
+    <Content Include="WebUserControl2.ascx" />
     <None Include="Properties\PublishProfiles\dev-asp-sds - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\dev-asp-sds - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
@@ -225,6 +226,13 @@
     </Compile>
     <Compile Include="carrito.ascx.designer.cs">
       <DependentUpon>carrito.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl2.ascx.cs">
+      <DependentUpon>WebUserControl2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl2.ascx.designer.cs">
+      <DependentUpon>WebUserControl2.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

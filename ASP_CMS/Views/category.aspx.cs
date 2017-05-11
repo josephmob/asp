@@ -4,7 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using System.Data;
+using System.Configuration;
+using System.Data.SqlClient;
 namespace ASP_CMS.Views.Layouts
 {
     public partial class WebForm2 : System.Web.UI.Page
@@ -31,6 +33,11 @@ namespace ASP_CMS.Views.Layouts
 
 
 
+        }
+        protected void OnPagePropertiesChanging(object sender, PagePropertiesChangingEventArgs e)
+        {
+            (gridProductosCategoria.FindControl("DataPager1") as DataPager).SetPageProperties(e.StartRowIndex, e.MaximumRows, false);
+            //this.BindListView();
         }
         public System.Data.DataTable GetCategoryProducts(int categoryId)
         {
