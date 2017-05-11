@@ -15,10 +15,16 @@ namespace ASP_CMS.Views.Layouts
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            MenuCategoriesNoms.DataSource = CategoriasNombre();
+            MenuCategoriesNoms.DataBind();
+            var parent = (ListView)FindControl("MenuCategoriesNoms");
+            var lst = FindControlRecursive(parent, "SubcategoriesNoms");
+           // var lst = BuscaControls();
+            lst.DataSource = SubcategoriasNombre();
+            lst.DataBind();
             DataTable dt = this.GetDataParent();
-            cargarMenu(dt, 0, null);
-
+            //cargarMenu(dt, 0, null);
+          
         }
 
         private DataTable GetDataParent()
@@ -41,7 +47,7 @@ namespace ASP_CMS.Views.Layouts
 
         }
 
-        private void cargarMenu(DataTable dt, int parentMenuId, MenuItem parentMenuItem)
+      /*  private void cargarMenu(DataTable dt, int parentMenuId, MenuItem parentMenuItem)
         {
             string currentPage = Path.GetFileName(Request.Url.AbsolutePath);
             foreach (DataRow row in dt.Rows)
@@ -64,12 +70,62 @@ namespace ASP_CMS.Views.Layouts
                     parentMenuItem.ChildItems.Add(menuItem);
                 }
             }
+        }*/
+
+
+
+        public System.Data.DataTable CategoriasNombre()
+        {
+
+            var productos = Models.ConnectionClass.PortarDades(@"SELECT *
+                                                                    FROM [dbo].[categorias]
+																	");
+            return productos.Tables["dades"];
+
+        }
+        public System.Data.DataTable SubcategoriasNombre()
+        {
+
+            var productos = Models.ConnectionClass.PortarDades(@"SELECT *
+                                                                 FROM [dbo].[subcategorias]
+                                                                 where [dbo].[subcategorias].[id_categoria] = 1
+																	");
+            return productos.Tables["dades"];
+
+        }
+
+        public ListView BuscaControls()
+        { 
+            foreach (Control ctr in MenuCategoriesNoms.Controls) {
+                    if ((ctr.GetType() == typeof(ListView))) {
+                      
+                          
+                            return (ListView)ctr;
+               
+                                
+
+                        
+        
+                    }
+    
+            }
+            return null;
         }
 
 
+        public ListView FindControlRecursive(Control control, string id)
+        {
+            foreach (Control ctl in control.Controls)
+            {
+                
+                if (ctl.ID == id)
+                    return ctl as ListView;
 
+                Control child = FindControlRecursive(ctl, id);
+                if (child != null)
+                    return child as ListView;
+            }
+            return null;
+        }
     }
-
-
-
 }

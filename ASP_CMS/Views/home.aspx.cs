@@ -12,7 +12,7 @@ namespace ASP_CMS.Views.Layouts
         protected void Page_Load(object sender, EventArgs e)
         {
             try
-            {
+            {                
                 //int productId = int.Parse(Request.QueryString["id"]);
                 SliderHome.DataSource = GetProduct();
                 SliderHot.DataSource = GetHotWeek();
