@@ -31,15 +31,6 @@ namespace ASP_CMS.Views.Layouts {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// MyMenu control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu MyMenu;
-        
-        /// <summary>
         /// home control.
         /// </summary>
         /// <remarks>
@@ -47,6 +38,15 @@ namespace ASP_CMS.Views.Layouts {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label home;
+        
+        /// <summary>
+        /// MenuCategoriesNoms control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView MenuCategoriesNoms;
         
         /// <summary>
         /// ContentPlaceHolder1 control.
