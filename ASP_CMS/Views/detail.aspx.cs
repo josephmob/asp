@@ -17,6 +17,9 @@ namespace ASP_CMS.Views.Layouts
                 int productId = int.Parse(Request.QueryString["id"]);
                 Producto.DataSource = GetProduct(productId);
                 Producto.DataBind();
+
+                lvSubcategorias.DataSource = this.cargarsubcategorias(productId);
+                lvSubcategorias.DataBind();
             }
             catch (Exception)
             {
@@ -41,6 +44,19 @@ namespace ASP_CMS.Views.Layouts
             }
 
 
+        }
+        public System.Data.DataTable cargarsubcategorias(int productId)
+        {
+            var categoria = Models.ConnectionClass.PortarDades(@"select categorias.id, categorias.nombre,subcategorias.id idSubCategoria
+                from categorias, subcategorias, articulos_subcategorias
+                where categorias.id = subcategorias.id_categoria
+                and subcategorias.id = articulos_subcategorias.id_subcategoria
+                and articulos_subcategorias.id_articulo = " + productId);
+            var categoriaId = categoria.Tables["dades"].Rows[0]["id"].ToString();
+            NombreCategoriaSideBar.Text = categoria.Tables["dades"].Rows[0]["nombre"].ToString();
+            var subcategorias = Models.ConnectionClass.PortarDades("select * from subcategorias where id_categoria = " + categoriaId);
+
+            return subcategorias.Tables["dades"];
         }
     }
 }

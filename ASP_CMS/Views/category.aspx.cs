@@ -19,6 +19,7 @@ namespace ASP_CMS.Views.Layouts
 
                 NombreCategoria.Text = GetCategoryName(categoryId);
                 NombreCategoriaSiteMap.Text = GetCategoryName(categoryId);
+                NombreCategoriaSideBar.Text = GetCategoryName(categoryId);
 
                 lvSubcategorias.DataSource = this.cargarsubcategorias(categoryId);
                 lvSubcategorias.DataBind();

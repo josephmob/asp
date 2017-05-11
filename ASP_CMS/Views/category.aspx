@@ -10,9 +10,10 @@
 
                 <div class="col-md-12">
                     <ul class="breadcrumb">
-                        <li><a href="#">Home</a>
+                        <li><a href="home.aspx">Home</a>
                         </li>
-                        <li><asp:Label ID="NombreCategoriaSiteMap" runat="server" Text="Pagina No Encontrada"></asp:Label></li>
+                        <li>
+                            <asp:Label ID="NombreCategoriaSiteMap" runat="server" Text="Pagina No Encontrada"></asp:Label></li>
                     </ul>
                 </div>
 
@@ -28,26 +29,22 @@
                         <div class="panel-body">
                             <ul class="nav nav-pills nav-stacked category-menu">
                                 <li>
-                                    <a href="category.html"><asp:Label ID="Label1" runat="server" Text="Pagina No Encontrada"></asp:Label></a>
+                                    <a href="#">
+                                        <asp:Label ID="NombreCategoriaSideBar" runat="server" Text="Pagina No Encontrada"></asp:Label></a>
                                     <asp:ListView runat="server" ID="lvSubcategorias">
-
-
-                                    <LayoutTemplate>
-                                        <ul>
-                                            <div runat="server" id="itemPlaceHolder" />
- 
-                                    </ul>
-                                                
-           
-                                    </LayoutTemplate>
-                                    <ItemTemplate>
-                                             <li><a href="category.aspx?categoryId=<%# Eval("id") %>"> <%# Eval("nombre") %> </a>
+                                        <LayoutTemplate>
+                                            <ul>
+                                                <div runat="server" id="itemPlaceHolder" />
+                                            </ul>
+                                        </LayoutTemplate>
+                                        <ItemTemplate>
+                                            <li><a href="category.aspx?categoryId=<%# Eval("id") %>"><%# Eval("nombre") %> </a>
                                             </li>
-                                    </ItemTemplate>
-                                </asp:ListView>
-                                    
+                                        </ItemTemplate>
+                                    </asp:ListView>
+
                                 </li>
-                               
+
 
                             </ul>
 
@@ -69,8 +66,9 @@
 
                 <div class="col-md-9">
                     <div class="box">
-                        <h1><asp:Label ID="NombreCategoria" runat="server" Text="Pagina No Encontrada"></asp:Label></h1>
-                        
+                        <h1>
+                            <asp:Label ID="NombreCategoria" runat="server" Text="Pagina No Encontrada"></asp:Label></h1>
+
                         <%--<p>In our Ladies department we offer wide selection of the best products we have found and carefully selected worldwide.</p>--%>
                     </div>
 
