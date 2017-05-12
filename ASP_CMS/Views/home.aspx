@@ -40,8 +40,8 @@
                                     <i class="fa fa-heart"></i>
                                 </div>
 
-                                <h3><a href="#">We love our customers</a></h3>
-                                <p>We are known to provide best possible service ever</p>
+                                <h3><a href="#">Amamos a nuestros clientes</a></h3>
+                                <p>Conocidos por proporcionar el mejor servicio</p>
                             </div>
                         </div>
 
@@ -51,8 +51,8 @@
                                     <i class="fa fa-tags"></i>
                                 </div>
 
-                                <h3><a href="#">Best prices</a></h3>
-                                <p>You can check that the height of the boxes adjust when longer text like this one is used in one of them.</p>
+                                <h3><a href="#">Los mejores precios</a></h3>
+                                <p>Nuestros precios son muy competitivos y trabajamos a diario para que así sea</p>
                             </div>
                         </div>
 
@@ -62,8 +62,8 @@
                                     <i class="fa fa-thumbs-up"></i>
                                 </div>
 
-                                <h3><a href="#">100% satisfaction guaranteed</a></h3>
-                                <p>Free returns on everything for 3 months.</p>
+                                <h3><a href="#">100% satisfaccón garantizada</a></h3>
+                                <p>Devoluciones gratuitas hasta 15 días</p>
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,7 @@
                 <div class="box">
                     <div class="container">
                         <div class="col-md-12">
-                            <h2>Hot this week</h2>
+                            <h2>Las bambas de la semana</h2>
                         </div>
                     </div>
                 </div>
@@ -102,12 +102,12 @@
                                         <div class="flip-container">
                                             <div class="flipper">
                                                 <div class="front">
-                                                    <a href="detail.aspx">
+                                                    <a href="detail.aspx?id=<%# Eval("id") %>">
                                                         <img src="/Upload/<%# Eval("url") %>" alt="" class="pol">
                                                     </a>
                                                 </div>
                                                 <div class="back">
-                                                    <a href="detail.aspx">
+                                                    <a href="detail.aspx?id=<%# Eval("id") %>">
                                                         <img src="/Upload/<%# Eval("url") %>" alt="" class="pol">
                                                     </a>
                                                 </div>
@@ -115,7 +115,7 @@
                                         </div>
                                         <asp:View ID="View1" runat="server"></asp:View>
 
-                                        <a href="detail.aspx" class="invisible">
+                                        <a href="detail.aspx?id=<%# Eval("id") %>" class="invisible">
                                             <img src="/Upload/<%# Eval("url") %>" alt="" class="pol">
                                         </a>
                                         <div class="text">

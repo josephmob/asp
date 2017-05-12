@@ -56,7 +56,7 @@ namespace ASP_CMS.Views.Layouts
                 {
                     Value = row["id"].ToString(),
                     Text = row["nombre"].ToString(),
-                    NavigateUrl = "category.aspx?categoryId=" + row["id"].ToString(),
+                    NavigateUrl = "../category.aspx?categoryId=" + row["id"].ToString(),
                     Selected = row["nombre"].ToString().EndsWith(currentPage, StringComparison.CurrentCultureIgnoreCase)
                 };
                 if (parentMenuId == 0)

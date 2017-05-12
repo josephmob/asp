@@ -16,8 +16,6 @@
                         </li>
                         <li><a href="#">Ladies</a>
                         </li>
-                        <li><a href="#">Tops</a>
-                        </li>
                         <li>White Blouse Armani</li>
                     </ul>
                 </div>
@@ -34,45 +32,20 @@
                         <div class="panel-body">
                             <ul class="nav nav-pills nav-stacked category-menu">
                                 <li>
-                                    <a href="category.html">Men <span class="badge pull-right">42</span></a>
-                                    <ul>
-                                        <li><a href="category.html">T-shirts</a>
-                                        </li>
-                                        <li><a href="category.html">Shirts</a>
-                                        </li>
-                                        <li><a href="category.html">Pants</a>
-                                        </li>
-                                        <li><a href="category.html">Accessories</a>
-                                        </li>
-                                    </ul>
+                                    <a href="#">
+                                        <asp:Label ID="NombreCategoriaSideBar" runat="server" Text="Categoria No Encontrada"></asp:Label></a>
+                                    <asp:ListView runat="server" ID="lvSubcategorias">
+                                        <LayoutTemplate>
+                                            <ul>
+                                                <div runat="server" id="itemPlaceHolder" />
+                                            </ul>
+                                        </LayoutTemplate>
+                                        <ItemTemplate>
+                                            <li><a href="category.aspx?categoryId=<%# Eval("id") %>"><%# Eval("nombre") %> </a>
+                                            </li>
+                                        </ItemTemplate>
+                                    </asp:ListView>
                                 </li>
-                                <li class="active">
-                                    <a href="category.html">Ladies  <span class="badge pull-right">123</span></a>
-                                    <ul>
-                                        <li><a href="category.html">T-shirts</a>
-                                        </li>
-                                        <li><a href="category.html">Skirts</a>
-                                        </li>
-                                        <li><a href="category.html">Pants</a>
-                                        </li>
-                                        <li><a href="category.html">Accessories</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="category.html">Kids  <span class="badge pull-right">11</span></a>
-                                    <ul>
-                                        <li><a href="category.html">T-shirts</a>
-                                        </li>
-                                        <li><a href="category.html">Skirts</a>
-                                        </li>
-                                        <li><a href="category.html">Pants</a>
-                                        </li>
-                                        <li><a href="category.html">Accessories</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
                             </ul>
 
                         </div>
@@ -177,7 +150,6 @@
                             <div class="row" id="productMain">
                                 <div class="col-sm-6">
                                     <div id="mainImage">
-                                        <%--<asp:Image ID="Image1" runat="server" CssClass="img-responsive" ImageUrl='~/Upload/<%#Eval("url")%>' />--%>
                                         <img src="/Upload/<%# Eval("url") %>" alt="" class="img-responsive">
                                     </div>
                                 </div>
@@ -251,7 +223,7 @@
                         </ItemTemplate>
                     </asp:FormView>
 
-                    <div class="row same-height-row">
+                    <%--<div class="row same-height-row">
                         <div class="col-md-3 col-sm-6">
                             <div class="box same-height" style="height: 379px;">
                                 <h3>Products viewed recently</h3>
@@ -342,7 +314,7 @@
                             <!-- /.product -->
                         </div>
 
-                    </div>
+                    </div>--%>
 
                 </div>
                 <!-- /.col-md-9 -->

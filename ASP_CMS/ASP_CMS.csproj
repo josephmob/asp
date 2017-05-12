@@ -135,6 +135,7 @@
     <Content Include="Upload\AirMax2.png" />
     <Content Include="Upload\asics_gellyte_5.jpg" />
     <Content Include="Upload\asics_gelyte3_rose.jpg" />
+    <Content Include="Upload\crocks_rayo2.jpg" />
     <Content Include="Upload\crocs_rayo.jpg" />
     <Content Include="Upload\jordan_gold.jpg" />
     <Content Include="Upload\jordan_one_unc.jpg" />
@@ -152,6 +153,7 @@
     <Content Include="css\fonts\fontawesome-webfont.ttf" />
     <Content Include="css\fonts\fontawesome-webfont.woff" />
     <Content Include="css\fonts\FontAwesome.otf" />
+    <Content Include="carrito.ascx" />
     <None Include="Properties\PublishProfiles\dev-asp-sds - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\dev-asp-sds - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
@@ -216,6 +218,13 @@
     </Compile>
     <Compile Include="Views\Layouts\_Layout.Master.designer.cs">
       <DependentUpon>_Layout.Master</DependentUpon>
+    </Compile>
+    <Compile Include="carrito.ascx.cs">
+      <DependentUpon>carrito.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="carrito.ascx.designer.cs">
+      <DependentUpon>carrito.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
