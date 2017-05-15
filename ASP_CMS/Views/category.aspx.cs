@@ -63,6 +63,7 @@ namespace ASP_CMS.Views.Layouts
             return categoria.Tables["dades"].Rows[0]["nombre"].ToString();
         }
 
+
         public System.Data.DataTable cargarsubcategorias(int categoryId)
         {
             var subcategorias = Models.ConnectionClass.PortarDades("select * from subcategorias where id_categoria = " + categoryId);
