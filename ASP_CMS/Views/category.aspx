@@ -1,10 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/_Layout.Master" AutoEventWireup="true" CodeBehind="category.aspx.cs" Inherits="ASP_CMS.Views.Layouts.WebForm2" %>
+﻿<%@ Page Title="" enableEventValidation="false"  Language="C#" MasterPageFile="~/Views/Layouts/_Layout.Master" AutoEventWireup="true" CodeBehind="category.aspx.cs" Inherits="ASP_CMS.Views.Layouts.WebForm2" %>
+
+<%@ Register Src="~/carrito.ascx" TagPrefix="uc1" TagName="carrito" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="all">
-
+        
         <div id="content">
             <div class="container">
 
@@ -119,23 +122,23 @@
                                                     <a href="detail.aspx?id=<%# Eval("id") %>">
                                                         <img src="/Upload/<%# Eval("url") %>" alt="" class="img-responsive productImage">
                                                     </a>
-                                                </div>
+                                                &nbsp;</div>
                                                 <div class="back">
                                                     <a href="detail.aspx?id=<%# Eval("id") %>">
                                                         <img src="/Upload/<%# Eval("url") %>" alt="" class="img-responsive productImage">
                                                     </a>
-                                                </div>
+                                                &nbsp;</div>
                                             </div>
                                         </div>
                                         <a href="detail.aspx?id=<%# Eval("id") %>" class="invisible">
                                             <img src="/Upload/<%# Eval("url") %>" alt="" class="img-responsive productImage">
                                         </a>
-                                        <div class="text">
+                                        &nbsp;<div class="text">
                                             <h3><a href="detail.aspx?id=<%# Eval("id") %>"><%# Eval("nombre") %></a></h3>
                                             <p class="price"><%# Eval("precio") %>€</p>
                                             <p class="buttons">
                                                 <a href="detail.aspx?id=<%# Eval("id") %>" class="btn btn-default">Ver Mas</a>
-                                                <a href="basket.aspx" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Añadir al Carrito</a>
+                                                <uc1:carrito runat="server" ID="carrito" idArticulo='<%# Eval("id") %>' />
                                             </p>
                                         </div>
 
@@ -414,4 +417,5 @@
             <!-- /.container -->
         </div>
         <!-- /#content -->
+    </div>
 </asp:Content>
