@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using System.Web.UI.WebControls;
 
-namespace ASP_CMS
+namespace subMenuItem
 {
-    public partial class WebUserControl2 : System.Web.UI.UserControl
+    public class subMenuItem : ListView
     {
         public int idCategoria
         {
@@ -21,4 +16,5 @@ namespace ASP_CMS
             }
         }
     }
+        
 }

@@ -127,9 +127,9 @@
 
                     <!--MENU ERIC -->
                     <div class="navbar-collapse collapse" id="navigation" orientation="Vertical">
-                         
-                            
-                        
+
+
+
                         <ul class="nav navbar-nav navbar-left">
                             <li class="active"><a href="index.html">
                                 <asp:Label ID="home" runat="server" Text="Label"></asp:Label></a>
@@ -142,34 +142,24 @@
                                         <div class="yamm-content">
                                             <div class="row">
 
-                                                     <asp:ListView ID="MenuCategoriesNoms" runat="server">
-                                                        <LayoutTemplate>
-                                                            <div runat="server" id="itemPlaceHolder" />
+                                                <asp:ListView ID="MenuCategoriesNoms" runat="server">
+                                                    <LayoutTemplate>
+                                                        <div runat="server" id="itemPlaceHolder" />
 
-                                                        </LayoutTemplate>
-                                                        <ItemTemplate>
+                                                    </LayoutTemplate>
+                                                    <ItemTemplate>
 
-                                                            <div class="col-sm-3">
-                                                                <h5><%# Eval("nombre") %></h5>           
-                                                                <ul>
-                                                                    <li>
-                                                                        <asp:ListView ID="SubcategoriesNoms" runat="server">                                                                        
-                                                                            <LayoutTemplate>
-                                                                               <div runat="server" id="itemPlaceHolder" />
+                                                        <div class="col-sm-3">
+                                                            <h5><a href="category.aspx?categoryId=<%# Eval("id") %>"><%# Eval("nombre") %></a></h5>
+                                                            <%--<ul>
+                                                                <li>
+                                                                </li>
+                                                            </ul>--%>
+                                                        </div>
+                                                    </ItemTemplate>
+                                                </asp:ListView>
 
-                                                                            </LayoutTemplate>
-                                                                            <ItemTemplate>
-                                                                                   <a href="#"><%# Eval("nombre") %></a>
-                                                                                    
-                                                                            </ItemTemplate>
-                                                                            </asp:ListView>
-                                                                    </li>
-                                                                </ul>                                                                
-                                                            </div>
-                                                        </ItemTemplate>
-                                                    </asp:ListView>
 
-                                                       
                                             </div>
                                         </div>
                                         <!-- /.yamm-content -->
@@ -258,39 +248,39 @@
                         </ul>
 
                     </div>
-                <!--/.nav-collapse -->
-
-                <div class="navbar-buttons">
-
-                    <div class="navbar-collapse collapse right" id="basket-overview">
-                        <a href="basket.aspx" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">3 items in cart</span></a>
-                    </div>
                     <!--/.nav-collapse -->
 
-                    <div class="navbar-collapse collapse right" id="search-not-mobile">
-                        <button type="button" class="btn navbar-btn btn-primary" data-toggle="collapse" data-target="#search">
-                            <span class="sr-only">Toggle search</span>
-                            <i class="fa fa-search"></i>
-                        </button>
+                    <div class="navbar-buttons">
+
+                        <div class="navbar-collapse collapse right" id="basket-overview">
+                            <a href="basket.aspx" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">3 items in cart</span></a>
+                        </div>
+                        <!--/.nav-collapse -->
+
+                        <div class="navbar-collapse collapse right" id="search-not-mobile">
+                            <button type="button" class="btn navbar-btn btn-primary" data-toggle="collapse" data-target="#search">
+                                <span class="sr-only">Toggle search</span>
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+
                     </div>
 
-                </div>
+                    <div class="collapse clearfix" id="search">
 
-                <div class="collapse clearfix" id="search">
+                        <form class="navbar-form" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                                <span class="input-group-btn">
 
-                    <form class="navbar-form" role="search">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search">
-                            <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
 
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>
+                        </form>
 
-                            </span>
-                        </div>
-                    </form>
-
-                </div>
-                <!--/.nav-collapse -->
+                    </div>
+                    <!--/.nav-collapse -->
 
                 </div>
                 <!-- /.container -->
@@ -311,13 +301,13 @@
                             <h4>Pages</h4>
 
                             <ul>
-                                <li><a href="text.html">About us</a>
+                                <li><a href="text.html">Sobre nosotros</a>
                                 </li>
-                                <li><a href="text.html">Terms and conditions</a>
+                                <li><a href="text.html">Terminos y condiciones</a>
                                 </li>
                                 <li><a href="faq.html">FAQ</a>
                                 </li>
-                                <li><a href="contacto.aspx">Contact us</a>
+                                <li><a href="contacto.aspx">Contacte con nosotros</a>
                                 </li>
                             </ul>
 
@@ -339,7 +329,7 @@
 
                         <div class="col-md-3 col-sm-6">
 
-                            <h4>Top categories</h4>
+                            <h4>Categorias TOP</h4>
 
                             <h5>Men</h5>
 
@@ -370,20 +360,18 @@
 
                         <div class="col-md-3 col-sm-6">
 
-                            <h4>Where to find us</h4>
+                            <h4>Donde encontrarnos</h4>
 
                             <p>
-                                <strong>Obaju Ltd.</strong>
+                                <strong>Kravitz</strong>
                                 <br>
-                                13/25 New Avenue
+                                Carrer Don Bosco
                             <br>
-                                New Heaven
+                                Sarrià
                             <br>
-                                45Y 73J
+                                23-45
                             <br>
-                                England
-                            <br>
-                                <strong>Great Britain</strong>
+                                España
                             </p>
 
                             <hr class="hidden-md hidden-lg">
@@ -394,9 +382,9 @@
 
                         <div class="col-md-3 col-sm-6">
 
-                            <h4>Get the news</h4>
+                            <h4>Noticias</h4>
 
-                            <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                            <p class="text-muted">Las noticias de las bambas mas cool del momento</p>
 
                             <!-- <form>
                             <div class="input-group">
@@ -415,15 +403,13 @@
                             <!-- /input-group -->
                             <hr>
 
-                            <h4>Stay in touch</h4>
+                            <h4>Mantente en contacto</h4>
 
                             <p class="social">
                                 <a href="https://www.facebook.com" class="facebook external" data-animate-hover="shake"><i class="fa fa-facebook"></i></a>
                                 <a href="https://www.twitter.com" class="twitter external" data-animate-hover="shake"><i class="fa fa-twitter"></i></a>
                                 <a href="https://www.instagram.com" class="instagram external" data-animate-hover="shake"><i class="fa fa-instagram"></i></a>
                             </p>
-
-
                         </div>
                         <!-- /.col-md-3 -->
 
@@ -436,9 +422,6 @@
             <!-- /#footer -->
 
             <!-- *** FOOTER END *** -->
-
-
-
 
             <!-- *** COPYRIGHT ***
  _________________________________________________________ -->
