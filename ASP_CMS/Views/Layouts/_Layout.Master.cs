@@ -112,7 +112,6 @@ namespace ASP_CMS.Views.Layouts
             return null;
         }
 
-
         public ListView FindControlRecursive(Control control, string id)
         {
             foreach (Control ctl in control.Controls)
