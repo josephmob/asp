@@ -17,6 +17,8 @@ namespace ASP_CMS.Views.Layouts
                 int productId = int.Parse(Request.QueryString["id"]);
                 Producto.DataSource = GetProduct(productId);
                 Producto.DataBind();
+              //  Venuts.DataSource = MesVenuts();
+              //  Venuts.DataBind();
             }
             catch (Exception)
             {
@@ -42,5 +44,22 @@ namespace ASP_CMS.Views.Layouts
 
 
         }
+
+
+        public System.Data.DataTable MesVenuts() 
+        {
+
+            var productos = Models.ConnectionClass.PortarDades(@"SELECT TOP 3 *
+                                                                    FROM [dbo].[articulos]
+																	join fotos_articulos on fotos_articulos.id_articulo = articulos.id
+                                                                    join fotos on fotos.id = fotos_articulos.id_foto                                                              
+                                                                    ORDER BY NEWID()");
+            return productos.Tables["dades"];
+
+
+
+
+        }
+
     }
 }
