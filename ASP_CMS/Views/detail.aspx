@@ -227,7 +227,7 @@
 
                         <div class="col-md-3 col-sm-6">
                             <div class="box same-height" style="height: 379px;">
-                                <h3>Mas venidas recientemente</h3>
+                                <h3>Mas venidas</h3>
                             </div>
                         </div>
 

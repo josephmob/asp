@@ -26,54 +26,57 @@
                         <form method="post" action="checkout1.html">
 
                             <h1>Shopping cart</h1>
-                            <p class="text-muted">You currently have 3 item(s) in your cart.</p>
+                            <p class="text-muted">You currently have this item(s) in your cart:</p>
                             <div class="table-responsive">
-                                <asp:ListView runat="server" ID="lvProductos">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">Product</th>
+                                            <th>Cantidad</th>
+                                            <th>Precio unitario</th>
+                                            <th>IVA</th>
+                                            <th colspan="2">Base imponible</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <asp:ListView runat="server" ID="lvProductos">
 
 
-                                    <LayoutTemplate>
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th colspan="2">Product</th>
-                                                    <th>Cantidad</th>
-                                                    <th>Precio unitario</th>
-                                                    <th>IVA</th>
-                                                    <th colspan="2">Base imponible</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
+                                            <LayoutTemplate>
+
 
                                                 <div runat="server" id="itemPlaceHolder" />
-                                            </tbody>
-                                            <tfoot>
+
+                                            </LayoutTemplate>
+                                            <ItemTemplate>
                                                 <tr>
-                                                    <th colspan="5">Total</th>
-                                                    <th colspan="2">$446.00</th>
+                                                    <td>
+                                                        <a href="#">
+                                                            <img src="/Upload/<%# Eval("url") %>" alt="White Blouse Armani">
+                                                        </a>
+                                                    </td>
+                                                    <td><a href="#"><%# Eval("nombre") %></a>
+                                                    </td>
+                                                    <td>
+                                                        <input type="number" value='<%# Eval("cantidad") %>' class="form-control">
+                                                    </td>
+                                                    <td><%# Eval("precio") %>€</td>
+                                                    <td>21%</td>
+                                                    <td>€</td>
+                                                    <td><a href="#"><i class="fa fa-trash-o"></i></a>
+                                                    </td>
                                                 </tr>
-                                            </tfoot>
-                                        </table>
-                                    </LayoutTemplate>
-                                    <ItemTemplate>
+                                            </ItemTemplate>
+                                        </asp:ListView>
+                                    </tbody>
+                                    <tfoot>
                                         <tr>
-                                            <td>
-                                                <a href="#">
-                                                    <img src="/img/detailsquare.jpg" alt="White Blouse Armani">
-                                                </a>
-                                            </td>
-                                            <td><a href="#"><%# Eval("nombre") %></a>
-                                            </td>
-                                            <td>
-                                                <input type="number" value='<%# Eval("cantidad") %>' class="form-control">
-                                            </td>
-                                            <td><%# Eval("precio") %>€</td>
-                                            <td>21%</td>
-                                            <td>€</td>
-                                            <td><a href="#"><i class="fa fa-trash-o"></i></a>
-                                            </td>
+                                            <th colspan="5">Total</th>
+                                            <th colspan="2">
+                                                <asp:Label Text="0" ID="PrecioTotal" runat="server" />€</th>
                                         </tr>
-                                    </ItemTemplate>
-                                </asp:ListView>
+                                    </tfoot>
+                                </table>
 
                             </div>
                             <!-- /.table-responsive -->
@@ -195,28 +198,28 @@
                 <div class="col-md-3">
                     <div class="box" id="order-summary">
                         <div class="box-header">
-                            <h3>Order summary</h3>
+                            <h3>Resumen de pedido</h3>
                         </div>
-                        <p class="text-muted">Shipping and additional costs are calculated based on the values you have entered.</p>
+                        <p class="text-muted">Los precios de envío y transporte se calculan dependiendo del peso y tamaño de los elementos incluidos en el carrito</p>
 
                         <div class="table-responsive">
                             <table class="table">
                                 <tbody>
                                     <tr>
-                                        <td>Order subtotal</td>
-                                        <th>$446.00</th>
+                                        <td>Subtotal del pedido</td>
+                                        <th><asp:Label Text="0" ID="orderSubtotal" runat="server" />€</th>
                                     </tr>
                                     <tr>
-                                        <td>Shipping and handling</td>
-                                        <th>$10.00</th>
+                                        <td>Envío</td>
+                                        <th>10€</th>
                                     </tr>
                                     <tr>
-                                        <td>Tax</td>
-                                        <th>$0.00</th>
+                                        <td>Impuestos</td>
+                                        <th><asp:Label Text="0" ID="orderAllTaxes" runat="server" />€</th>
                                     </tr>
                                     <tr class="total">
                                         <td>Total</td>
-                                        <th>$456.00</th>
+                                        <th><asp:Label Text="0" ID="orderFinalPrice" runat="server" />€</th>
                                     </tr>
                                 </tbody>
                             </table>
