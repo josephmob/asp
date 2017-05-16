@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/_Layout.Master" AutoEventWireup="true" CodeBehind="basket.aspx.cs" Inherits="ASP_CMS.Views.Layouts.WebForm4" %>
 
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -62,11 +64,11 @@
                                             <td><a href="#"><%# Eval("nombre") %></a>
                                             </td>
                                             <td>
-                                                <input type="number" value="2" class="form-control">
+                                                <input type="number" value='<%# Eval("cantidad") %>' class="form-control">
                                             </td>
-                                            <td><%# Convert.ToInt32(Eval("precio"))+12 %>€</td>
+                                            <td><%# Eval("precio") %>€</td>
                                             <td>21%</td>
-                                            <td><%# Convert.ToInt32(Eval("precio"))+12 %>€</td>
+                                            <td>€</td>
                                             <td><a href="#"><i class="fa fa-trash-o"></i></a>
                                             </td>
                                         </tr>
