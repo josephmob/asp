@@ -83,6 +83,9 @@
     <Content Include="css\style.pink.css" />
     <Content Include="css\style.violet.css" />
     <Content Include="css\utilidades.css" />
+    <Content Include="img\adidas_gaz.jpg" />
+    <Content Include="img\adidas_stan.jpg" />
+    <Content Include="img\adidas_zx.jpg" />
     <Content Include="img\AjaxLoader.gif" />
     <Content Include="img\banner.jpg" />
     <Content Include="img\banner2.jpg" />
