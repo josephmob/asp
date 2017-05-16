@@ -9,7 +9,7 @@
 
                 <div class="col-md-12">
                     <ul class="breadcrumb">
-                        <li><a href="#">Home</a>
+                        <li><a href="home.aspx">Home</a>
                         </li>
                         <li>Contact</li>
                     </ul>
@@ -22,7 +22,7 @@
                     <div class="panel panel-default sidebar-menu">
 
                         <div class="panel-heading">
-                            <h3 class="panel-title">Pages</h3>
+                            <h3 class="panel-title">Paginas</h3>
                         </div>
 
                         <div class="panel-body">
@@ -31,7 +31,7 @@
                                     <a href="text.html">Text page</a>
                                 </li>
                                 <li>
-                                    <a href="contacto.aspx">Contact page</a>
+                                    <a href="contacto.aspx">Pagina de contacto</a>
                                 </li>
                                 <li>
                                     <a href="faq.html">FAQ</a>
@@ -55,16 +55,16 @@
 
 
                     <div class="box" id="contact">
-                        <h1>Contact</h1>
+                        <h1>Contacto</h1>
 
-                        <p class="lead">Are you curious about something? Do you have some kind of problem with our products?</p>
-                        <p>Please feel free to contact us, our customer service center is working for you 24/7.</p>
+                        <p class="lead">¿Estás interesado en algo? ¿Tiene algún tipo de problema con nuestros productos?</p>
+                        <p>Sienta por favor sientese libre de entrarnos en contacto con, nuestro centro de servicio de cliente está trabajando para usted 24/7.</p>
 
                         <hr>
 
                         <div class="row">
                             <div class="col-sm-4">
-                                <h3><i class="fa fa-map-marker"></i> Address</h3>
+                                <h3><i class="fa fa-map-marker"></i> Dirección</h3>
                                 <p>13/25 New Avenue
                                     <br>New Heaven
                                     <br>45Y 73J
@@ -75,16 +75,16 @@
                             </div>
                             <!-- /.col-sm-4 -->
                             <div class="col-sm-4">
-                                <h3><i class="fa fa-phone"></i> Call center</h3>
-                                <p class="text-muted">This number is toll free if calling from Great Britain otherwise we advise you to use the electronic form of communication.</p>
+                                <h3><i class="fa fa-phone"></i> Para Llamadas</h3>
+                                <p class="text-muted">Este número es gratuito si llama de Gran Bretaña de lo contrario le aconsejamos que utilice la forma electrónica de comunicación.</p>
                                 <p><strong>+33 555 444 333</strong>
                                 </p>
                             </div>
                             <!-- /.col-sm-4 -->
                             <div class="col-sm-4">
-                                <h3><i class="fa fa-envelope"></i> Electronic support</h3>
-                                <p class="text-muted">Please feel free to write an email to us or to use our electronic ticketing system.</p>
-                                <li>kravitz.sds@fakeemail.com</li>
+                                <h3><i class="fa fa-envelope"></i> Soporte</h3>
+                                <p class="text-muted">Por favor, no dude en escribirnos un correo electrónico o utilizar nuestro sistema de billetes electrónicos.</p>
+                                <p>kravitz.sds@fakeemail.com</p>
                             </div>
                             <!-- /.col-sm-4 -->
                         </div>
@@ -92,24 +92,21 @@
 
                         <hr>
 
-                        <div id="map">
-
-                        </div>
-
+                        
                         <hr>
-                        <h2>Contact form</h2>
+                        <h2>Formulario de Contacto</h2>
 
                         <form>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="firstname">Firstname</label>
+                                        <label for="firstname">Nombre</label>
                                         <input type="text" class="form-control" id="firstname">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="lastname">Lastname</label>
+                                        <label for="lastname">Apellido</label>
                                         <input type="text" class="form-control" id="lastname">
                                     </div>
                                 </div>
@@ -121,19 +118,19 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="subject">Subject</label>
+                                        <label for="subject">Asunto</label>
                                         <input type="text" class="form-control" id="subject">
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <label for="message">Message</label>
+                                        <label for="message">Mensaje</label>
                                         <textarea id="message" class="form-control"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-12 text-center">
-                                    <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Send message</button>
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Enviar mensaje</button>
 
                                 </div>
                             </div>
