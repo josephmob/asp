@@ -20,6 +20,8 @@ namespace ASP_CMS.Views.Layouts
 
             MenuCategoriesNoms.DataSource = CategoriasNombre();
             MenuCategoriesNoms.DataBind();
+            categoriasFooter.DataSource = CategoriasNombre();
+            categoriasFooter.DataBind();
             //var parent = (ListView)FindControl("MenuCategoriesNoms");
             //var lst = FindControlRecursive(parent, "SubcategoriesNoms");
 

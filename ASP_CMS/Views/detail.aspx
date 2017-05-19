@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/_Layout.Master" AutoEventWireup="true" CodeBehind="detail.aspx.cs" Inherits="ASP_CMS.Views.Layouts.WebForm3" %>
-
+<%@ Register Src="~/carrito.ascx" TagPrefix="uc1" TagName="carrito" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -162,7 +162,7 @@
                                         <p class="price"><%# Eval("precio") %>€</p>
 
                                         <p class="text-center buttons">
-                                            <a href="basket.aspx" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                            <uc1:carrito runat="server" ID="carrito" idArticulo='<%# Eval("id") %>' />
                                         </p>
                                     </div>
 
