@@ -53,11 +53,11 @@
                         <ul class="menu">
                             <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
                             </li>
-                            <li><a href="register.html">Register</a>
+                            <li><a href="register.html">Registro</a>
                             </li>
-                            <li><a href="contact.html">Contact</a>
+                            <li><a href="contact.html">Contacto</a>
                             </li>
-                            <li><a href="#">Recently viewed</a>
+                            <li><a href="#">Vistos recientemente</a>
                             </li>
                         </ul>
                     </div>
@@ -221,7 +221,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3">
-                                                    <h5>Pages and blog</h5>
+                                                    <h5>Paginas y blog</h5>
                                                     <ul>
                                                         <li><a href="blog.html">Blog listing</a>
                                                         </li>
@@ -298,7 +298,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
-                            <h4>Pages</h4>
+                            <h4>Paginas</h4>
 
                             <ul>
                                 <li><a href="text.html">Sobre nosotros</a>
@@ -330,29 +330,14 @@
                         <div class="col-md-3 col-sm-6">
 
                             <h4>Categorias TOP</h4>
-
-                            <h5>Men</h5>
-
-                            <ul>
-                                <li><a href="category.html">T-shirts</a>
-                                </li>
-                                <li><a href="category.html">Shirts</a>
-                                </li>
-                                <li><a href="category.html">Accessories</a>
-                                </li>
-                            </ul>
-
-                            <h5>Ladies</h5>
-                            <ul>
-                                <li><a href="category.html">T-shirts</a>
-                                </li>
-                                <li><a href="category.html">Skirts</a>
-                                </li>
-                                <li><a href="category.html">Pants</a>
-                                </li>
-                                <li><a href="category.html">Accessories</a>
-                                </li>
-                            </ul>
+                            <asp:ListView ID="categoriasFooter" runat="server">
+                                <LayoutTemplate>
+                                    <div runat="server" id="itemPlaceHolder" />
+                                </LayoutTemplate>
+                                <ItemTemplate>
+                                    <h5><a href="category.aspx?categoryId=<%# Eval("id") %>"><%# Eval("nombre") %></a></h5>
+                                </ItemTemplate>
+                            </asp:ListView>
 
                             <hr class="hidden-md hidden-lg">
                         </div>
