@@ -1,17 +1,22 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/_Layout.Master" AutoEventWireup="true" CodeBehind="category.aspx.cs" Inherits="ASP_CMS.Views.Layouts.WebForm2" %>
+﻿<%@ Page Title="" enableEventValidation="false"  Language="C#" MasterPageFile="~/Views/Layouts/_Layout.Master" AutoEventWireup="true" CodeBehind="category.aspx.cs" Inherits="ASP_CMS.Views.Layouts.WebForm2" %>
+
+<%@ Register Src="~/carrito.ascx" TagPrefix="uc1" TagName="carrito" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="all">
-
+        
         <div id="content">
             <div class="container">
 
                 <div class="col-md-12">
                     <ul class="breadcrumb">
-                        <li><a href="#">Home</a>
+                        <li><a href="home.aspx">Home</a>
                         </li>
-                        <li>Ladies</li>
+                        <li>
+                            <asp:Label ID="NombreCategoriaSiteMap" runat="server" Text="Pagina No Encontrada"></asp:Label></li>
                     </ul>
                 </div>
 
@@ -21,59 +26,37 @@
                     <div class="panel panel-default sidebar-menu">
 
                         <div class="panel-heading">
-                            <h3 class="panel-title">Categories</h3>
+                            <h3 class="panel-title">Subcategorias</h3>
                         </div>
 
                         <div class="panel-body">
                             <ul class="nav nav-pills nav-stacked category-menu">
                                 <li>
-                                    <a href="category.html">Men <span class="badge pull-right">42</span></a>
-                                    <ul>
-                                        <li><a href="category.html">T-shirts</a>
-                                        </li>
-                                        <li><a href="category.html">Shirts</a>
-                                        </li>
-                                        <li><a href="category.html">Pants</a>
-                                        </li>
-                                        <li><a href="category.html">Accessories</a>
-                                        </li>
-                                    </ul>
+                                    <a href="#">
+                                        <asp:Label ID="NombreCategoriaSideBar" runat="server" Text="Pagina No Encontrada"></asp:Label></a>
+                                    <asp:ListView runat="server" ID="lvSubcategorias">
+                                        <LayoutTemplate>
+                                            <ul>
+                                                <div runat="server" id="itemPlaceHolder" />
+                                            </ul>
+                                        </LayoutTemplate>
+                                        <ItemTemplate>
+                                            <li><a href="category.aspx?categoryId=<%# Eval("id") %>"><%# Eval("nombre") %> </a>
+                                            </li>
+                                        </ItemTemplate>
+                                    </asp:ListView>
+
                                 </li>
-                                <li class="active">
-                                    <a href="category.html">Ladies  <span class="badge pull-right">123</span></a>
-                                    <ul>
-                                        <li><a href="category.html">T-shirts</a>
-                                        </li>
-                                        <li><a href="category.html">Skirts</a>
-                                        </li>
-                                        <li><a href="category.html">Pants</a>
-                                        </li>
-                                        <li><a href="category.html">Accessories</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="category.html">Kids  <span class="badge pull-right">11</span></a>
-                                    <ul>
-                                        <li><a href="category.html">T-shirts</a>
-                                        </li>
-                                        <li><a href="category.html">Skirts</a>
-                                        </li>
-                                        <li><a href="category.html">Pants</a>
-                                        </li>
-                                        <li><a href="category.html">Accessories</a>
-                                        </li>
-                                    </ul>
-                                </li>
+
 
                             </ul>
 
                         </div>
                     </div>
 
-                    
 
-                    
+
+
 
                     <!-- *** MENUS AND FILTERS END *** -->
 
@@ -86,8 +69,10 @@
 
                 <div class="col-md-9">
                     <div class="box">
-                        <h1>Ladies</h1>
-                        <p>In our Ladies department we offer wide selection of the best products we have found and carefully selected worldwide.</p>
+                        <h1>
+                            <asp:Label ID="NombreCategoria" runat="server" Text="Pagina No Encontrada"></asp:Label></h1>
+
+                        <%--<p>In our Ladies department we offer wide selection of the best products we have found and carefully selected worldwide.</p>--%>
                     </div>
 
                     <div class="box info-bar">
@@ -122,7 +107,52 @@
 
                     <div class="row products">
 
-                        <div class="col-md-4 col-sm-6">
+                        <asp:ListView runat="server" ID="gridProductosCategoria">
+
+                            <LayoutTemplate>
+                                <div runat="server" id="itemPlaceHolder" />
+                            </LayoutTemplate>
+
+                            <ItemTemplate>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="product">
+                                        <div class="flip-container">
+                                            <div class="flipper">
+                                                <div class="front">
+                                                    <a href="detail.aspx?id=<%# Eval("id") %>">
+                                                        <img src="/Upload/<%# Eval("url") %>" alt="" class="img-responsive productImage">
+                                                    </a>
+                                                &nbsp;</div>
+                                                <div class="back">
+                                                    <a href="detail.aspx?id=<%# Eval("id") %>">
+                                                        <img src="/Upload/<%# Eval("url") %>" alt="" class="img-responsive productImage">
+                                                    </a>
+                                                &nbsp;</div>
+                                            </div>
+                                        </div>
+                                        <a href="detail.aspx?id=<%# Eval("id") %>" class="invisible">
+                                            <img src="/Upload/<%# Eval("url") %>" alt="" class="img-responsive productImage">
+                                        </a>
+                                        &nbsp;<div class="text">
+                                            <h3><a href="detail.aspx?id=<%# Eval("id") %>"><%# Eval("nombre") %></a></h3>
+                                            <p class="price"><%# Eval("precio") %>€</p>
+                                            <p class="buttons">
+                                                <a href="detail.aspx?id=<%# Eval("id") %>" class="btn btn-default">Ver Mas</a>
+                                                <uc1:carrito runat="server" ID="carrito" idArticulo='<%# Eval("id") %>' />
+                                            </p>
+                                        </div>
+
+
+                                        <!-- /.text -->
+                                    </div>
+                                    <!-- /.product -->
+                                </div>
+                            </ItemTemplate>
+
+                        </asp:ListView>
+
+
+                        <%--<div class="col-md-4 col-sm-6">
                             <div class="product">
                                 <div class="flip-container">
                                     <div class="flipper">
@@ -153,6 +183,10 @@
                             </div>
                             <!-- /.product -->
                         </div>
+
+
+
+
 
                         <div class="col-md-4 col-sm-6">
                             <div class="product">
@@ -348,15 +382,15 @@
                             </div>
                             <!-- /.product -->
                         </div>
-                        <!-- /.col-md-4 -->
+                        <!-- /.col-md-4 -->--%>
                     </div>
                     <!-- /.products -->
 
                     <div class="pages">
 
-                        <p class="loadMore">
-                            <a href="#" class="btn btn-primary btn-lg"><i class="fa fa-chevron-down"></i> Load more</a>
-                        </p>
+                        <%--<p class="loadMore">
+                            <a href="#" class="btn btn-primary btn-lg"><i class="fa fa-chevron-down"></i>Load more</a>
+                        </p>--%>
 
                         <ul class="pagination">
                             <li><a href="#">&laquo;</a>
@@ -383,4 +417,5 @@
             <!-- /.container -->
         </div>
         <!-- /#content -->
+    </div>
 </asp:Content>
