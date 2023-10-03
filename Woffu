@@ -1,0 +1,93 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace WoffuKata
+{
+    public class Woffu
+    {
+        private IList<Allocation> Allocations;
+
+        public Woffu(IList<Allocation> allocations)
+        {
+            Allocations = allocations;
+        }
+
+        public void UpdateAvailability()
+        {
+            foreach (var allocation in Allocations)
+            {
+                if (allocation.Name != "HomeWork" && allocation.Name != "RemoteWork")
+                {
+                    UpdateNonWorkAllocation(allocation);
+                }
+                else
+                {
+                    UpdateWorkAllocation(allocation);
+                }
+            }
+        }
+
+																  
+		 
+																					  
+																				
+		 
+
+        private void UpdateNonWorkAllocation(Allocation allocation)
+        {
+            if (allocation.DaysToExpiration > 0 && allocation.Availability < 20)
+            {
+                if (allocation.Name != "Sickness")
+                {
+                    allocation.Availability += 0.1M;
+                }
+            }
+
+            allocation.DaysToExpiration--;
+
+            if (allocation.DaysToExpiration < 0)
+            {
+                if (allocation.Name != "Vacation" && allocation.Availability > 0)
+                {
+                    allocation.Availability = 0;
+                }
+                else if (allocation.Name == "Vacation" && allocation.Availability > 0)
+                {
+                    allocation.Availability -= 0.1M;
+                }
+            }
+        }
+
+        private void UpdateWorkAllocation(Allocation allocation)
+        {
+            if (allocation.DaysToExpiration > 0 && allocation.Availability > 0)
+            {
+                allocation.Availability -= 0.1M;
+				 
+													
+				 
+
+                if (allocation.Name == "RemoteWork")
+                {
+                    if (allocation.DaysToExpiration < 11 && allocation.Availability > 0)
+                    {
+                        allocation.Availability -= 0.1M;
+                    }
+
+                    if (allocation.DaysToExpiration < 6 && allocation.Availability > 0)
+                    {
+                        allocation.Availability -= 0.1M;
+                    }
+                }
+            }
+
+            allocation.DaysToExpiration--;
+
+            if (allocation.DaysToExpiration < 0 && allocation.Name != "Vacation" && allocation.Availability > 0)
+            {
+                allocation.Availability = 0;
+            }
+        }
+    }
+}
