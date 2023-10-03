@@ -23,7 +23,6 @@ namespace WoffuKata
                 }// la disponibildiad no puede ser mayor que 20 , menos si es sicckneses que seria 25 pero no se hace nada con sickness??
 
         }
-
         private void ActualizarAllocation(Allocation allocation)
         {
 			//5. Sickness" never has to be expired or increases in Availability
@@ -64,7 +63,6 @@ namespace WoffuKata
 						 
 					}
 				}
-				
 				//4.HomeWork" allocations actually decrease by 0.1 in Availability on each update.
 				if (allocation.Name == "HomeWork")
 				{
@@ -76,8 +74,7 @@ namespace WoffuKata
 					//lanzar mensaje de que no puede ser negativo?
 					allocation.Availability = 0;
 				}
-            }else{ } //se hace algo con sickness >25?
-			
+            }else{ } //se hace algo con sickness >25?			
         }
     }
 }
