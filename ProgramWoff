@@ -12,19 +12,17 @@ namespace WoffuKata
             var app = new Woffu(this.GetAllocation());
 
             // si los 31 es por algo en especifico lo veo bien  , si son los dias segun mes yo pondria algo asi (si hiciera falta crear las var's):
-            // for (var i = 0; i < DateTime.Now.Month(); i++)
+            // for (var i = 0; i < DateTime.DaysInMonth(DateTime.Now.Year(),DateTime.Now.Month(); i++)
             for (var i = 0; i < 31; i++)
             {
                 Console.WriteLine("-------- day " + i + " --------");
                 Console.WriteLine("name, expiration, availability");
 
                 //Aqui al tener la collecion haria un foreach ya que no necesitas contars.
-                // foreach (var allocaction in allocations)
-                for (var j = 0; j < allocations.Count; j++)
+                foreach (var allocaction in allocations)
                 {
                     // entonces quedaria la sentencia de writeLine mas facil
-                    //Console.WriteLine($"{allocation.Name}, {allocation.DaysToExpiration}, {allocation.Availability}");
-                    System.Console.WriteLine(allocations[j].Name + ", " + allocations[j].DaysToExpiration + ", " + allocations[j].Availability);
+                    Console.WriteLine($"{allocation.Name}, {allocation.DaysToExpiration}, {allocation.Availability}");
                 }
                 Console.WriteLine("");
                 app.UpdateAvailability();
